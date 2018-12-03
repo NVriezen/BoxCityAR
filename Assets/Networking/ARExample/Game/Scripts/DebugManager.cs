@@ -30,15 +30,15 @@ namespace hku.hydra.boxcity
 
 		#endregion
 
-		#region Public Methods
+		#region Public Fields
 
 		public static DebugManager Instance;
 
 		[Tooltip("The prefab to use for representing the player")]
 		public GameObject playerPrefab;
 
-		//[Tooltip("Cloud Anchor manager")]
-		//public GoogleARCore.Examples.CloudAnchors.CloudAnchorController cloudAnchor;
+		[Tooltip("Cloud Anchor manager")]
+		public GoogleARCore.Examples.CloudAnchors.CloudAnchorController cloudAnchor;
 
 		#endregion
 
@@ -53,27 +53,34 @@ namespace hku.hydra.boxcity
 
 		void Start() {
 			Instance = this;
-            //StartCoroutine (waitingStart());
+            StartCoroutine (waitingStart());
             //PrefabInstan();
 			
-			if (playerPrefab == null)
-			{
-				Debug.LogError("<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'",this);
-			}
-			else
-			{
-				if (UnityStandardAssets.Vehicles.Car.CarUserControl.LocalPlayerInstance == null)
-				{
-					Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
-					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-					PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
-				}
-				else
-				{
-					Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
-				}
-			}
-			
+			//if (playerPrefab == null)
+			//{
+			//	Debug.LogError("<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'",this);
+			//}
+			//else
+			//{
+			//	if (UnityStandardAssets.Vehicles.Car.CarUserControl.LocalPlayerInstance == null)
+			//	{
+			//		Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
+			//		// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
+			//		PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
+			//	}
+			//	else
+			//	{
+			//		Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
+			//	}
+			//}
+
+            //if (PhotonNetwork.IsMasterClient)
+            //{
+            //    cloudAnchor.OnEnterHostingModeClick();
+            //} else
+            //{
+            //    cloudAnchor.OnEnterResolvingModeClick();
+            //}
 		}
 
 		public void PrefabInstan(){
@@ -97,19 +104,22 @@ namespace hku.hydra.boxcity
 			}
 		}
 
-		/* 
+		 
 		IEnumerator waitingStart(){
-			if ( PhotonNetwork.IsMasterClient ) {
-				//cloudAnchor.OnEnterHostingModeClick ( 1000 );
-				while ( cloudAnchor.GetLastPlacedAnchor () ) {
+            Debug.Log("In coroutine");
+            if ( PhotonNetwork.IsMasterClient ) {
+				cloudAnchor.OnEnterHostingModeClick ();
+				while ( cloudAnchor.GetLastPlacedAnchor () == false ) {
+                    Debug.Log("Waiting");
 					yield return null;
 				}
 			} else {
-				//cloudAnchor.OnEnterHostingModeClick ( 1000 );
-				while ( cloudAnchor.GetLastResolvedAnchor () ) {
-					yield return null;
-				}
-			}
+                cloudAnchor.OnEnterHostingModeClick();
+                while ( cloudAnchor.GetLastResolvedAnchor () == false ) {
+                    Debug.Log("resolving");
+                    yield return null;
+                }
+            }
 			
 			if (playerPrefab == null)
 			{
@@ -128,8 +138,9 @@ namespace hku.hydra.boxcity
 					Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
 				}
 			}
-		}
-		*/
+            Debug.Log("out coroutine");
+        }
+		
 
 
 		#endregion
