@@ -27,8 +27,11 @@ EditorBuildSettings:
     path: Assets/Networking/ARExample/Game/MenuScenes/Launcher4.unity
     guid: f9850b8dc010b334eae0b50d25bb47f1
   - enabled: 1
-    path: Assets/Networking/ARExample/Game/GameScenes/RoomFor2.unity
+    path: Assets/Networking/ARExample/Game/GameScenes/RoomFor2NONAR.unity
     guid: 94e097a4627e19f42bdac80fb2694856
+  - enabled: 1
+    path: Assets/Networking/ARExample/Game/GameScenes/RoomFor2.unity
+    guid: e30a59af5edb2ea4b8af875c4240dce5
   - enabled: 1
     path: Assets/Networking/ARExample/Game/GameScenes/RoomFor3.unity
     guid: a1d00c38d207ccf469e3dcc6b3e93d48
