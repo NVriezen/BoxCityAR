@@ -1324,6 +1324,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 1102914805687976, guid: 437b454bf3c00d7419849e658681d451,
     type: 2}
   cloudAnchor: {fileID: 1206598992}
+  text: {fileID: 1299854173}
 --- !u!4 &489206836
 Transform:
   m_ObjectHideFlags: 0
