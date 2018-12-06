@@ -40,19 +40,23 @@ namespace hku.hydra.boxcity
 		[Tooltip("Cloud Anchor manager")]
 		public GoogleARCore.Examples.CloudAnchors.CloudAnchorController cloudAnchor;
 
-		#endregion
+        [Tooltip("Cloud Anchor manager")]
+        public UnityEngine.UI.Text text;
+
+        #endregion
 
 
-		#region Public Methods
+        #region Public Methods
 
 
-		public void LeaveRoom()
+        public void LeaveRoom()
 		{
 			PhotonNetwork.LeaveRoom();
 		}
 
 		void Start() {
 			Instance = this;
+            text.text = "start";
             StartCoroutine (waitingStart());
             //PrefabInstan();
 			
@@ -83,45 +87,51 @@ namespace hku.hydra.boxcity
             //}
 		}
 
-		public void PrefabInstan(){
-			if (playerPrefab == null)
-			{
-				Debug.LogError("<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'",this);
-			}
-			else
-			{
-				if (UnityStandardAssets.Vehicles.Car.CarUserControl.LocalPlayerInstance == null)
-				{
-					Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
-					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-					PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 0.1f, 0f), Quaternion.identity, 0);
-					//PhotonNetwork.Instantiate (this.playerPrefab.name, GameObject.Find("Player1Spawn").GetComponent<Transform>().position, Quaternion.identity, 0);
-				}
-				else
-				{
-					Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
-				}
-			}
-		}
+		//public void PrefabInstan(){
+		//	if (playerPrefab == null)
+		//	{
+		//		Debug.LogError("<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'",this);
+		//	}
+		//	else
+		//	{
+		//		if (UnityStandardAssets.Vehicles.Car.CarUserControl.LocalPlayerInstance == null)
+		//		{
+		//			Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
+		//			// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
+		//			PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 0.1f, 0f), Quaternion.identity, 0);
+		//			//PhotonNetwork.Instantiate (this.playerPrefab.name, GameObject.Find("Player1Spawn").GetComponent<Transform>().position, Quaternion.identity, 0);
+		//		}
+		//		else
+		//		{
+		//			Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
+		//		}
+		//	}
+		//}
 
 		 
 		IEnumerator waitingStart(){
-            Debug.Log("In coroutine");
-            if ( PhotonNetwork.IsMasterClient ) {
-				cloudAnchor.OnEnterHostingModeClick ();
-				while ( cloudAnchor.GetLastPlacedAnchor () == false ) {
-                    Debug.Log("Waiting");
-					yield return null;
-				}
-			} else {
-                cloudAnchor.OnEnterHostingModeClick();
-                while ( cloudAnchor.GetLastResolvedAnchor () == false ) {
-                    Debug.Log("resolving");
-                    yield return null;
-                }
+            //         Debug.Log("In coroutine");
+            //         if ( PhotonNetwork.IsMasterClient ) {
+            //	//cloudAnchor.OnEnterHostingModeClick ();
+            //	while ( cloudAnchor.GetLastPlacedAnchor () == false ) {
+            //                 Debug.Log("Waiting");
+            //		yield return null;
+            //	}
+            //} else {
+            //             //cloudAnchor.OnEnterHostingModeClick();
+            //             while ( cloudAnchor.GetLastResolvedAnchor () == false ) {
+            //                 Debug.Log("resolving");
+            //                 yield return null;
+            //             }
+            //         }
+            text.text = "waiting for field";
+            while (!GameObject.FindWithTag("Finish"))
+            {
+                yield return null;
             }
-			
-			if (playerPrefab == null)
+            Debug.Log("start Spawning");
+            text.text = "spawning";
+            if (playerPrefab == null)
 			{
 				Debug.LogError("<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'",this);
 			}
@@ -132,7 +142,8 @@ namespace hku.hydra.boxcity
 					Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
 					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
 					PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
-				}
+                    text.text = "carrr";
+                }
 				else
 				{
 					Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);

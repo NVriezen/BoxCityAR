@@ -186,9 +186,10 @@ namespace hku.hydra.boxcity
         {
             // #Critical
             // Load the Room Level.
-            if (PhotonNetwork.CurrentRoom.PlayerCount > 1)
+     //     if (PhotonNetwork.CurrentRoom.PlayerCount > 1)
             {
-                PhotonNetwork.LoadLevel("Roomfor" + PhotonNetwork.CurrentRoom.PlayerCount);
+                //PhotonNetwork.LoadLevel("Roomfor" + PhotonNetwork.CurrentRoom.PlayerCount);
+                PhotonNetwork.LoadLevel("Roomfor2");
             }
 
         }
@@ -229,6 +230,7 @@ namespace hku.hydra.boxcity
             if (!debug)
             {
                 PhotonNetwork.LoadLevel("Roomfor" + maxPlayersPerRoom);
+                //PhotonNetwork.LoadLevel("Roomfor2");
             }
             else
             {
