@@ -40,7 +40,7 @@ namespace hku.hydra.boxcity
 		[Tooltip("Cloud Anchor manager")]
 		public GoogleARCore.Examples.CloudAnchors.CloudAnchorController cloudAnchor;
 
-        [Tooltip("Cloud Anchor manager")]
+        [Tooltip("Text")]
         public UnityEngine.UI.Text text;
 
         #endregion

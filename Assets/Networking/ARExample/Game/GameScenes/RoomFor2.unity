@@ -1303,6 +1303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 489206836}
   - component: {fileID: 489206835}
+  - component: {fileID: 489206837}
   m_Layer: 0
   m_Name: DebugManager
   m_TagString: Untagged
@@ -1338,6 +1339,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &489206837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489206834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0e86d2306d4cb45bead68386f74038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScores:
+  - {fileID: 91370721}
+  - {fileID: 839674938}
+  - {fileID: 1367183678}
+  - {fileID: 1212755484}
 --- !u!1 &626874670
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,6 +3712,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1102914805687976, guid: 437b454bf3c00d7419849e658681d451, type: 2}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114196767724037284, guid: 437b454bf3c00d7419849e658681d451,
+        type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
