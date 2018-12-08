@@ -15,9 +15,9 @@ public class PlayerRoomCounter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //if (PhotonNetwork.IsConnected && PhotonNetwork.InRoom)
-        //{
-        //    playertext.text = "Connected: " + PhotonNetwork.CurrentRoom.PlayerCount;//.room.playerCount;
-        //}
+        if (PhotonNetwork.IsConnected && PhotonNetwork.InRoom)
+        {
+            playertext.text = "Connected: " + PhotonNetwork.CurrentRoom.PlayerCount;//.room.playerCount;
+        }
     }
 }

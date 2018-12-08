@@ -72,7 +72,7 @@ namespace hku.hydra.boxcity
                 controlPanel.SetActive(true);
                 PhotonNetwork.GameVersion = gameVersion;
                 PhotonNetwork.ConnectUsingSettings();
-                PhotonNetwork.JoinLobby();
+                //PhotonNetwork.JoinLobby();
             }
         }
 
@@ -104,8 +104,6 @@ namespace hku.hydra.boxcity
 		/// </summary>
 		public void CreateNewRoom()
         {
-            progressLabel.SetActive(true);
-            controlPanel.SetActive(false);
 
             // keep track of the will to join a room, because when we come back from the game we will get a callback that we are connected, so we need to know what to do then
             isConnecting = true;
@@ -113,6 +111,8 @@ namespace hku.hydra.boxcity
             if (PhotonNetwork.IsConnected)
             {
                 PhotonNetwork.CreateRoom(GameRoomNameInput.GetRoomName(), new RoomOptions { MaxPlayers = maxPlayersPerRoom });
+                progressLabel.SetActive(true);
+                controlPanel.SetActive(false);
             }
             else
             {
@@ -155,6 +155,8 @@ namespace hku.hydra.boxcity
         public override void OnConnectedToMaster(){
 			Debug.Log ("PUN Basics Tutorial/Launcher: OnConnectedToMaster() was called by PUN");
             //startButton.SetActive(true);
+            //PhotonNetwork.JoinLobby();
+
 
             // we don't want to do anything if we are not attempting to join a room.
             // this case where isConnecting is false is typically when you lost or quit the game, when this level is loaded, OnConnectedToMaster will be called, in that case
@@ -166,12 +168,12 @@ namespace hku.hydra.boxcity
             }
 		}
 
-		/// <summary>
-		/// Called after disconnecting from the Photon server. It could be a failure or an explicit disconnect call
-		/// </summary>
-		/// <remarks>The reason for this disconnect is provided as DisconnectCause.</remarks>
-		/// <param name="cause">Cause.</param>
-		public override void OnDisconnected(DisconnectCause cause){
+        /// <summary>
+        /// Called after disconnecting from the Photon server. It could be a failure or an explicit disconnect call
+        /// </summary>
+        /// <remarks>The reason for this disconnect is provided as DisconnectCause.</remarks>
+        /// <param name="cause">Cause.</param>
+        public override void OnDisconnected(DisconnectCause cause){
 			progressLabel.SetActive(false);
 			controlPanel.SetActive(true);
 			Debug.LogWarningFormat ("PUN Basics Tutorial/Launcher: OnDisconnected() was called by PUN with reason {0}", cause);
@@ -186,18 +188,35 @@ namespace hku.hydra.boxcity
         {
             // #Critical
             // Load the Room Level.
-     //     if (PhotonNetwork.CurrentRoom.PlayerCount > 1)
+            //     if (PhotonNetwork.CurrentRoom.PlayerCount > 1)
+            if (!debug)
             {
                 //PhotonNetwork.LoadLevel("Roomfor" + PhotonNetwork.CurrentRoom.PlayerCount);
                 PhotonNetwork.LoadLevel("Roomfor2");
+            } else
+            {
+                PhotonNetwork.LoadLevel("Roomfor2NONAR");
             }
 
+        }
+
+        public override void OnJoinedLobby()
+        {
+            base.OnJoinedLobby();
+            Debug.Log("Joined a lobby, yeahh" + PhotonNetwork.CurrentLobby.Name);
+        }
+
+        public override void OnCreatedRoom()
+        {
+            base.OnCreatedRoom();
+            Debug.Log("Created our own room");
         }
 
 
         public override void OnJoinedRoom(){
             // #Critical: We only load if we are the first player, else we rely on `PhotonNetwork.AutomaticallySyncScene` to sync our instance scene.
             progressLabel.SetActive(false);
+            Debug.Log("Joined a Room");
             if (/*PhotonNetwork.CurrentRoom.PlayerCount == maxPlayersPerRoom && */PhotonNetwork.IsMasterClient)
 			{
                 startButton.SetActive(true);

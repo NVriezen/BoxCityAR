@@ -17,7 +17,7 @@ public class GameTimer : MonoBehaviour {
 	void Update(){
 		float remainingTime = totalTime - (Time.time - startTime);
 		float minutes = Mathf.Floor(remainingTime / 60);
-		float seconds = (remainingTime - minutes);
+		float seconds = remainingTime % 60;
 		timerText.text = minutes.ToString("00") + ":" + seconds.ToString ("00");
 	}
 }
