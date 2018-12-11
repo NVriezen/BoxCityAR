@@ -30,6 +30,11 @@ public class ScoreUpdater : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        EventManager.StopListening("SCORE_PLAYER_" + playerNum, AddScore);
+    }
+
     //Change this to event based updating!
     void AddScore()
     {
