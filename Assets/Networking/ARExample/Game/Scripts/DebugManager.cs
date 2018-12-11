@@ -43,6 +43,8 @@ namespace hku.hydra.boxcity
         [Tooltip("Text")]
         public UnityEngine.UI.Text text;
 
+        public static bool gameOver = false;
+
         #endregion
 
 
@@ -55,6 +57,7 @@ namespace hku.hydra.boxcity
 		}
 
 		void Start() {
+            gameOver = false;
 			Instance = this;
             text.text = "start";
             StartCoroutine (waitingStart());
