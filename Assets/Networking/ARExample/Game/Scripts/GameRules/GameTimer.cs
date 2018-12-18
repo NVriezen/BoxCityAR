@@ -25,11 +25,16 @@ namespace hku.hydra.boxcity
             if (remainingTime <= 0)
             {
                 remainingTime = 0;
-                DebugManager.gameOver = true;
+                //DebugManager.gameOver = true;
+                EventManager.TriggerEvent("GAME_OVER");
             }
 
             float minutes = Mathf.Floor(remainingTime / 60);
             float seconds = remainingTime % 60;
+            if (seconds == 60)
+            {
+                seconds = 0;
+            }
             timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
         }
     }

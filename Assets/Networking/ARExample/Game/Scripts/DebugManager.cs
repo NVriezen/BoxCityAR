@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 
 using UnityEngine;
@@ -8,6 +9,8 @@ using UnityEngine.SceneManagement;
 
 using Photon.Pun;
 using Photon.Realtime;
+
+using System.Linq;
 
 
 namespace hku.hydra.boxcity
@@ -37,18 +40,39 @@ namespace hku.hydra.boxcity
 		[Tooltip("The prefab to use for representing the player")]
 		public GameObject playerPrefab;
 
-		[Tooltip("Cloud Anchor manager")]
-		public GoogleARCore.Examples.CloudAnchors.CloudAnchorController cloudAnchor;
+		//[Tooltip("Cloud Anchor manager")]
+		//public GoogleARCore.Examples.CloudAnchors.CloudAnchorController cloudAnchor;
 
         [Tooltip("Text")]
         public UnityEngine.UI.Text text;
 
         public static bool gameOver = false;
 
+        [Tooltip("Game Over Canvas")]
+        public GameObject gameOverCanvas;
+
         #endregion
 
 
         #region Public Methods
+
+        private void Awake()
+        {
+            gameOverCanvas.SetActive(false);
+            EventManager.StartListening("GAME_OVER", OnGameOver);
+        }
+
+        void OnGameOver()
+        {
+            gameOverCanvas.SetActive(true);
+            gameOver = true;
+        }
+
+        override public void OnDisable()
+        {
+            base.OnDisable();
+            EventManager.StopListening("GAME_OVER", OnGameOver);
+        }
 
 
         public void LeaveRoom()
@@ -57,7 +81,6 @@ namespace hku.hydra.boxcity
 		}
 
 		void Start() {
-            gameOver = false;
 			Instance = this;
             text.text = "start";
             StartCoroutine (waitingStart());
@@ -111,6 +134,11 @@ namespace hku.hydra.boxcity
 		//	}
 		//}
 
+        public void RestartGame()
+        {
+            PhotonNetwork.LoadLevel("RoomFor2");
+        }
+
 		 
 		IEnumerator waitingStart(){
             //         Debug.Log("In coroutine");
@@ -143,8 +171,13 @@ namespace hku.hydra.boxcity
 				if (UnityStandardAssets.Vehicles.Car.CarUserControl.LocalPlayerInstance == null)
 				{
 					Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
-					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-					PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
+                    // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
+                    List<Player> playerList = PhotonNetwork.CurrentRoom.Players.Values.ToList();
+                    Vector3 spawnPos = GameObject.Find("SpawnPointP" + PhotonNetwork.LocalPlayer.ActorNumber).transform.position;
+
+                    GameObject tempPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPos, Quaternion.identity, 0);
+                    //GameObject tempPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
+                    tempPlayer.GetComponent<EventSender>().playerNum = PhotonNetwork.LocalPlayer.ActorNumber;
                     text.text = "carrr";
                 }
 				else

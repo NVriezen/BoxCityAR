@@ -15,12 +15,15 @@ EditorBuildSettings:
     path: Assets/Networking/ARExample/Game/MenuScenes/JoinRoom.unity
     guid: 49bb70789babf7a4d950fa37fb2f46bd
   - enabled: 1
+    path: Assets/Networking/ARExample/Game/MenuScenes/WaitForPlayers.unity
+    guid: c465db76ba474e84c8ef5cb140b07d1b
+  - enabled: 0
     path: Assets/Networking/ARExample/Game/MenuScenes/Launcher2.unity
     guid: 65c046b6c80a4524d9e440c51380af0a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Networking/ARExample/Game/MenuScenes/Launcher3.unity
     guid: 4e8dfe574685d784ebf8c26f3fa1fe97
-  - enabled: 1
+  - enabled: 0
     path: Assets/Networking/ARExample/Game/MenuScenes/Launcher4.unity
     guid: f9850b8dc010b334eae0b50d25bb47f1
   - enabled: 1
@@ -29,10 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Networking/ARExample/Game/GameScenes/RoomFor2NONAR.unity
     guid: 94e097a4627e19f42bdac80fb2694856
-  - enabled: 1
+  - enabled: 0
     path: Assets/Networking/ARExample/Game/GameScenes/RoomFor3.unity
     guid: a1d00c38d207ccf469e3dcc6b3e93d48
-  - enabled: 1
+  - enabled: 0
     path: Assets/Networking/ARExample/Game/GameScenes/RoomFor4.unity
     guid: ee1cdb0a2677214498a5f871cab5083a
   m_configObjects: {}

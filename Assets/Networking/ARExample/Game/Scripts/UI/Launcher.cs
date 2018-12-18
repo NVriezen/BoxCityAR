@@ -189,14 +189,15 @@ namespace hku.hydra.boxcity
             // #Critical
             // Load the Room Level.
             //     if (PhotonNetwork.CurrentRoom.PlayerCount > 1)
-            if (!debug)
-            {
-                //PhotonNetwork.LoadLevel("Roomfor" + PhotonNetwork.CurrentRoom.PlayerCount);
-                PhotonNetwork.LoadLevel("Roomfor2");
-            } else
-            {
-                PhotonNetwork.LoadLevel("Roomfor2NONAR");
-            }
+            //if (!debug)
+            //{
+            //    //PhotonNetwork.LoadLevel("Roomfor" + PhotonNetwork.CurrentRoom.PlayerCount);
+            //    PhotonNetwork.LoadLevel("Roomfor2");
+            //} else
+            //{
+            //    PhotonNetwork.LoadLevel("Roomfor2NONAR");
+            //}
+            PhotonNetwork.LoadLevel("WaitForPlayers");
 
         }
 
@@ -219,6 +220,7 @@ namespace hku.hydra.boxcity
             Debug.Log("Joined a Room");
             if (/*PhotonNetwork.CurrentRoom.PlayerCount == maxPlayersPerRoom && */PhotonNetwork.IsMasterClient)
 			{
+                PhotonNetwork.CurrentRoom.IsVisible = true;
                 startButton.SetActive(true);
                 //StartCoroutine(OnJoin());
 
