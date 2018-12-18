@@ -809,7 +809,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: d425c5c4cb38fd44f95b13e9f94575c2, type: 2}
+  - {fileID: 2100000, guid: 80826ed7ade4aa14a9f6e95c809f73f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114132922569730332}
   viewIdField: 0
-  InstantiationId: 2
+  InstantiationId: 1
   isRuntimeInstantiated: 0
 --- !u!114 &114355407212628210
 MonoBehaviour:
@@ -1097,8 +1097,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  force: 100000
-  turnSpeed: 10
+  force: 1000
+  turnSpeed: 0.1
 --- !u!114 &114731836764920328
 MonoBehaviour:
   m_ObjectHideFlags: 1

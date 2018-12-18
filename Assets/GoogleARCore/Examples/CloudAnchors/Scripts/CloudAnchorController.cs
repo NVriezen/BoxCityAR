@@ -216,7 +216,7 @@ namespace GoogleARCore.Examples.CloudAnchors
 
                 // Make Andy model a child of the anchor.
                 andyObject.transform.parent = m_LastPlacedAnchor.transform;
-
+                DontDestroyOnLoad(m_LastPlacedAnchor.gameObject);
                 // Save cloud anchor.
                 _HostLastPlacedAnchor();
             }
@@ -237,6 +237,21 @@ namespace GoogleARCore.Examples.CloudAnchors
 
             m_CurrentMode = ApplicationMode.Hosting;
             m_CurrentRoom = Random.Range(1, 9999);
+            UIController.SetRoomTextValue(m_CurrentRoom);
+            UIController.ShowHostingModeBegin();
+        }
+
+        public void OnEnterHostingModeClick(int roomNum)
+        {
+            if (m_CurrentMode == ApplicationMode.Hosting)
+            {
+                m_CurrentMode = ApplicationMode.Ready;
+                _ResetStatus();
+                return;
+            }
+
+            m_CurrentMode = ApplicationMode.Hosting;
+            m_CurrentRoom = roomNum;//m_CurrentRoom = Random.Range(1, 9999);
             UIController.SetRoomTextValue(m_CurrentRoom);
             UIController.ShowHostingModeBegin();
         }
@@ -291,6 +306,42 @@ namespace GoogleARCore.Examples.CloudAnchors
         }
 
         /// <summary>
+        /// Handles the user intent to resolve the cloud anchor associated with a room they have typed into the UI.
+        /// </summary>
+        public void OnResolveRoomClick(int roomNum, string ip, bool onDevice)
+        {
+            var roomToResolve = roomNum;//UIController.GetRoomInputValue();
+            if (roomToResolve == 0)
+            {
+                Debug.LogError("Anchor resolve failed due to invalid room code.");//UIController.ShowResolvingModeBegin("Anchor resolve failed due to invalid room code.");
+                return;
+            }
+
+            //UIController.SetRoomTextValue(roomToResolve);
+            string ipAddress =
+                //UIController.GetResolveOnDeviceValue() ? k_LoopbackIpAddress : UIController.GetIpAddressInputValue();
+                onDevice ? k_LoopbackIpAddress : ip;
+
+            //UIController.ShowResolvingModeAttemptingResolve();
+            RoomSharingClient roomSharingClient = new RoomSharingClient();
+            roomSharingClient.GetAnchorIdFromRoom(roomToResolve, ipAddress, (bool found, string cloudAnchorId) =>
+            {
+                if (!found)
+                {
+                    //UIController.ShowResolvingModeBegin("Anchor resolve failed due to invalid room code, " +
+                    //"ip address or network error.");
+                    Debug.LogError("Anchor resolve failed due to invalid room code, " +
+                    "ip address or network error.");
+                    EventManager.TriggerEvent("ANCHOR_RESOLVE_FAILED");
+                }
+                else
+                {
+                    _ResolveAnchorFromId(cloudAnchorId);
+                }
+            });
+        }
+
+        /// <summary>
         /// Hosts the user placed cloud anchor and associates the resulting Id with the current room.
         /// </summary>
         private void _HostLastPlacedAnchor()
@@ -309,11 +360,13 @@ namespace GoogleARCore.Examples.CloudAnchors
                 {
                     UIController.ShowHostingModeBegin(
                         string.Format("Failed to host cloud anchor: {0}", result.Response));
+                    EventManager.TriggerEvent("ANCHOR_HOST_FAILED");
                     return;
                 }
 
                 RoomSharingServer.SaveCloudAnchorToRoom(m_CurrentRoom, result.Anchor);
                 UIController.ShowHostingModeBegin("Cloud anchor was created and saved.");
+                EventManager.TriggerEvent("ANCHOR_PLACED");
             });
 #endif
         }
@@ -329,11 +382,13 @@ namespace GoogleARCore.Examples.CloudAnchors
                 if (result.Response != CloudServiceResponse.Success)
                 {
                     UIController.ShowResolvingModeBegin(string.Format("Resolving Error: {0}.", result.Response));
+                    EventManager.TriggerEvent("ANCHOR_RESOLVE_FAILED");
                     return;
                 }
 
                 m_LastResolvedAnchor = result.Anchor;
-                Instantiate(_GetAndyPrefab(), result.Anchor.transform);
+                DontDestroyOnLoad(Instantiate(_GetAndyPrefab(), result.Anchor.transform));
+                EventManager.TriggerEvent("ANCHOR_PLACED");
                 UIController.ShowResolvingModeSuccess();
             }));
         }

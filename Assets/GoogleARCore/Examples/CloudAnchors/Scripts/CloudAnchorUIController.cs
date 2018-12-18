@@ -257,5 +257,31 @@ namespace GoogleARCore.Examples.CloudAnchors
 #endif
             return ipAddress;
         }
+
+        /// <summary>
+        /// Gets the device IP address.
+        /// </summary>
+        /// <returns>The device IP address.</returns>
+        public string GetDeviceIpAddress()
+        {
+            string ipAddress;
+#if UNITY_2018_2_OR_NEWER
+            string hostName = Dns.GetHostName();
+            IPAddress[] addresses = Dns.GetHostAddresses(hostName);
+
+            ipAddress = "Unknown";
+            foreach (IPAddress address in addresses)
+            {
+                if (address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                {
+                    ipAddress = address.ToString();
+                    break;
+                }
+            }
+#else
+            ipAddress = Network.player.ipAddress;
+#endif
+            return ipAddress;
+        }
     }
 }

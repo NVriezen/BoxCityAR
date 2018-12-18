@@ -113,7 +113,6 @@ QualitySettings:
     resolutionScalingFixedDPIFactor: 1
     excludedTargetPlatforms:
     - iPhone
-    - Android
   - serializedVersion: 2
     name: Fantastic
     pixelLightCount: 4
@@ -149,7 +148,6 @@ QualitySettings:
     resolutionScalingFixedDPIFactor: 1
     excludedTargetPlatforms:
     - iPhone
-    - Android
   m_PerPlatformDefaultQuality:
     Android: 1
     Standalone: 3
