@@ -60,7 +60,8 @@ namespace hku.hydra.boxcity
                 spawnPos = playingField.GetComponent<Transform>().position + new Vector3(Random.Range(-fieldSize, fieldSize), 1, Random.Range(-fieldSize, fieldSize));
                 walkable = !Physics.CheckSphere(spawnPos, catRadius - 0.1f, unwalkableMask); //Check for multiple masks and set multiple bools for walkable, interactable, grass, etc.
             } while (walkable == false);
-            spawnPos = new Vector3(spawnPos.x, 0.01f, spawnPos.z);
+            //spawnPos = new Vector3(spawnPos.x, 0.01f, spawnPos.z);
+            spawnPos = new Vector3(spawnPos.x, playingField.GetComponent<Transform>().position.y + 0.01f, spawnPos.z);
             Instantiate(catnipPrefab, spawnPos, this.transform.rotation);
         }
     }
