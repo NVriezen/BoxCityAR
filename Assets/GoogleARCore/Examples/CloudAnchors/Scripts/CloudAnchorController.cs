@@ -367,6 +367,7 @@ namespace GoogleARCore.Examples.CloudAnchors
                 RoomSharingServer.SaveCloudAnchorToRoom(m_CurrentRoom, result.Anchor);
                 UIController.ShowHostingModeBegin("Cloud anchor was created and saved.");
                 EventManager.TriggerEvent("ANCHOR_PLACED");
+                GameObject.Find("XPAnchor").AddComponent<DontDestroyAR>();
             });
 #endif
         }
@@ -389,6 +390,7 @@ namespace GoogleARCore.Examples.CloudAnchors
                 m_LastResolvedAnchor = result.Anchor;
                 DontDestroyOnLoad(Instantiate(_GetAndyPrefab(), result.Anchor.transform));
                 EventManager.TriggerEvent("ANCHOR_PLACED");
+                GameObject.Find("XPAnchor").AddComponent<DontDestroyAR>();
                 UIController.ShowResolvingModeSuccess();
             }));
         }
