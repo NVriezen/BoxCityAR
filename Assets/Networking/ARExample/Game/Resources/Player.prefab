@@ -1097,8 +1097,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  force: 1000
-  turnSpeed: 0.1
+  force: 40000
+  turnSpeed: 10
 --- !u!114 &114731836764920328
 MonoBehaviour:
   m_ObjectHideFlags: 1
