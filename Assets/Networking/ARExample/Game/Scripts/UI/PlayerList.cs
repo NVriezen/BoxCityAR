@@ -13,7 +13,7 @@ public class PlayerList : MonoBehaviour {
         //update a certain amount of frames
         if (Time.frameCount % 3 == 0)
         {
-            if (PhotonNetwork.IsConnected && (PhotonNetwork.CurrentRoom.Players.Count > this.transform.childCount))
+            if (PhotonNetwork.IsConnected && PhotonNetwork.InRoom && (PhotonNetwork.CurrentRoom.Players.Count > this.transform.childCount))
             {
                 GameObject newLabel = Instantiate(playerLabel, this.transform);
 

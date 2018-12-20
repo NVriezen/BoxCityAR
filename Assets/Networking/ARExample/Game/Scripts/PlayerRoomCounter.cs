@@ -19,5 +19,5 @@ public class PlayerRoomCounter : MonoBehaviour {
         {
             playertext.text = "Connected: " + PhotonNetwork.CurrentRoom.PlayerCount;//.room.playerCount;
         }
-	}
+    }
 }

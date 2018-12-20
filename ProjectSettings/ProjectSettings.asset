@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 0
   companyName: Hydra
-  productName: BoxcityPrototype
+  productName: Catnip Catastrophe
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -118,7 +118,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0.0
+  bundleVersion: 0.13.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -151,14 +151,14 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: hku.hydra.boxcityproto
+    Android: hku.hydra.catnip
     Standalone: unity.Unity Technologies.Tanks!!!
     Tizen: com.unity3d.tanksiii
     iOS: com.unity3d.tanksiii
     tvOS: com.unity3d.tanksiii
   buildNumber:
     iOS: 28
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 13
   AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
