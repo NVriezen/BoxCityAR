@@ -13,18 +13,21 @@ namespace hku.hydra.boxcity
         [Tooltip("Total amount of time in seconds for one game round.")]
         public float totalTime;
         private float startTime;
+        bool gameOver;
 
         void Start()
         {
             startTime = Time.time;
+            gameOver = false;
         }
 
         void Update()
         {
             float remainingTime = totalTime - (Time.time - startTime);
-            if (remainingTime <= 0)
+            if ((remainingTime <= 0) && (gameOver == false))
             {
                 remainingTime = 0;
+                gameOver = true;
                 //DebugManager.gameOver = true;
                 EventManager.TriggerEvent("GAME_OVER");
             }
