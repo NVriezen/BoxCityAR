@@ -56,5 +56,6 @@ public class GameOverScores : MonoBehaviourPunCallbacks
                 textList[0].text = p.GetScore().ToString();
             }
         }
+        EventManager.StopListening("GAME_OVER", ShowScores);
     }
 }

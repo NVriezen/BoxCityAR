@@ -1211,11 +1211,11 @@ MonoBehaviour:
   RoomSharingServer: {fileID: 837701936}
   UIController: {fileID: 1713615896}
   ARCoreRoot: {fileID: 1903266928}
-  ARCoreAndyAndroidPrefab: {fileID: 1502073113144314, guid: ea89ff9ea84757943b671c78188e7b65,
+  ARCoreAndyAndroidPrefab: {fileID: 1157126732865394, guid: 4c91e62a2512d894891e0904703627d5,
     type: 2}
   ARKitRoot: {fileID: 1734289933}
   ARKitFirstPersonCamera: {fileID: 937573275}
-  ARKitAndyAndroidPrefab: {fileID: 1502073113144314, guid: ea89ff9ea84757943b671c78188e7b65,
+  ARKitAndyAndroidPrefab: {fileID: 1157126732865394, guid: 4c91e62a2512d894891e0904703627d5,
     type: 2}
 --- !u!4 &837701938
 Transform:
