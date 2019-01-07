@@ -172,12 +172,13 @@ namespace hku.hydra.boxcity
 				{
 					Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
                     // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                    List<Player> playerList = PhotonNetwork.CurrentRoom.Players.Values.ToList();
+ 
                     Vector3 spawnPos = GameObject.Find("SpawnPointP" + PhotonNetwork.LocalPlayer.ActorNumber).transform.position;
 
                     GameObject tempPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPos, Quaternion.identity, 0);
                     //GameObject tempPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
                     tempPlayer.GetComponent<EventSender>().playerNum = PhotonNetwork.LocalPlayer.ActorNumber;
+                    tempPlayer.transform.SetParent(GameObject.Find("XPAnchor").transform);
                     text.text = "carrr";
                 }
 				else

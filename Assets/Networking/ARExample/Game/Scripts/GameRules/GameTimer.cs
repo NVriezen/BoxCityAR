@@ -24,7 +24,7 @@ namespace hku.hydra.boxcity
         void Update()
         {
             float remainingTime = totalTime - (Time.time - startTime);
-            if ((remainingTime <= 0) && (gameOver == false))
+            if ((remainingTime <= 0))
             {
                 remainingTime = 0;
                 gameOver = true;
