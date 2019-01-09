@@ -25,13 +25,14 @@ namespace GoogleARCore
     using System.Diagnostics.CodeAnalysis;
     using GoogleARCoreInternal;
     using UnityEngine;
+    using Photon.Pun;
 
     /// <summary>
     /// Attaches a GameObject to an ARCore {@link Trackable}.  The transform of the GameObject will be updated to
     /// maintain the semantics of the attachment relationship, which varies between sub-types of Trackable.
     /// </summary>
     [HelpURL("https://developers.google.com/ar/reference/unity/class/GoogleARCore/Anchor")]
-    public class Anchor : MonoBehaviour
+    public class Anchor : MonoBehaviourPunCallbacks
     {
         private static Dictionary<IntPtr, Anchor> s_AnchorDict =
             new Dictionary<IntPtr, Anchor>(new IntPtrEqualityComparer());
@@ -40,6 +41,7 @@ namespace GoogleARCore
 
         private bool m_IsSessionDestroyed = false;
 
+        //public static GameObject anchorPrefab;
         /// <summary>
         /// Gets the tracking state of the anchor.
         /// </summary>
@@ -79,8 +81,10 @@ namespace GoogleARCore
 
             if (isCreate)
             {
-               Anchor anchor = (new GameObject()).AddComponent<Anchor>();
-               anchor.gameObject.name = "Anchor";
+                //Anchor anchor = (new GameObject()).AddComponent<Anchor>();
+                //anchor.gameObject.name = "Anchor";
+                GameObject an = PhotonNetwork.Instantiate("Anchor", Vector3.zero, Quaternion.identity);
+                Anchor anchor = an.GetComponent<Anchor>();
                anchor.m_NativeHandle = anchorNativeHandle;
                anchor.m_NativeSession = nativeApi;
                anchor.Update();

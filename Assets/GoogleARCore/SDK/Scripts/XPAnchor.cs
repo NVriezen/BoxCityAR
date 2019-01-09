@@ -25,12 +25,13 @@ namespace GoogleARCore.CrossPlatform
     using GoogleARCoreInternal;
     using GoogleARCoreInternal.CrossPlatform;
     using UnityEngine;
+    using Photon.Pun;
 
     /// <summary>
     /// A cross-platform anchor.
     /// </summary>
     [HelpURL("https://developers.google.com/ar/reference/unity/class/GoogleARCore/CrossPlatform/XPAnchor")]
-    public class XPAnchor : MonoBehaviour
+    public class XPAnchor : MonoBehaviourPunCallbacks
     {
         private static Dictionary<IntPtr, XPAnchor> s_AnchorDict =
             new Dictionary<IntPtr, XPAnchor>(new GoogleARCoreInternal.IntPtrEqualityComparer());
@@ -84,8 +85,10 @@ namespace GoogleARCore.CrossPlatform
 
             if (isCreate)
             {
-               XPAnchor anchor = (new GameObject()).AddComponent<XPAnchor>();
-               anchor.gameObject.name = "XPAnchor";
+               //XPAnchor anchor = (new GameObject()).AddComponent<XPAnchor>();
+               //anchor.gameObject.name = "XPAnchor";
+               GameObject an = PhotonNetwork.Instantiate("XPAnchor", Vector3.zero, Quaternion.identity);
+               XPAnchor anchor = an.GetComponent<XPAnchor>();
                anchor.CloudId = nativeSession.AnchorApi.GetCloudAnchorId(anchorHandle);
                anchor.m_NativeHandle = anchorHandle;
                anchor.m_NativeSession = nativeSession;

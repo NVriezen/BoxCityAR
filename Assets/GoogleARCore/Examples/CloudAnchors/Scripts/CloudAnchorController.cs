@@ -26,6 +26,7 @@ namespace GoogleARCore.Examples.CloudAnchors
     using GoogleARCore.Examples.Common;
     using UnityEngine;
     using UnityEngine.UI;
+    using Photon.Pun;
 
 	//
 	using Photon.Pun.UtilityScripts;
@@ -38,7 +39,7 @@ namespace GoogleARCore.Examples.CloudAnchors
     /// <summary>
     /// Controller for the Cloud Anchors Example.
     /// </summary>
-    public class CloudAnchorController : MonoBehaviour
+    public class CloudAnchorController : MonoBehaviourPunCallbacks
     {
         /// <summary>
         /// Manages sharing Anchor Ids across the local network to clients using Unity's NetworkServer.  There
@@ -208,7 +209,9 @@ namespace GoogleARCore.Examples.CloudAnchors
             if (m_LastPlacedAnchor != null)
             {
                 // Instantiate Andy model at the hit pose.
-                var andyObject = Instantiate(_GetAndyPrefab(), m_LastPlacedAnchor.transform.position,
+                //var andyObject = Instantiate(_GetAndyPrefab().name, m_LastPlacedAnchor.transform.position,
+                //    m_LastPlacedAnchor.transform.rotation);
+                var andyObject = PhotonNetwork.Instantiate(_GetAndyPrefab().name, m_LastPlacedAnchor.transform.position,
                     m_LastPlacedAnchor.transform.rotation);
 
                 // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
@@ -367,7 +370,7 @@ namespace GoogleARCore.Examples.CloudAnchors
                 RoomSharingServer.SaveCloudAnchorToRoom(m_CurrentRoom, result.Anchor);
                 UIController.ShowHostingModeBegin("Cloud anchor was created and saved.");
                 EventManager.TriggerEvent("ANCHOR_PLACED");
-                GameObject.Find("XPAnchor").AddComponent<DontDestroyAR>();
+                //GameObject.Find("XPAnchor").AddComponent<DontDestroyAR>();
             });
 #endif
         }
@@ -388,7 +391,7 @@ namespace GoogleARCore.Examples.CloudAnchors
                 }
 
                 m_LastResolvedAnchor = result.Anchor;
-                DontDestroyOnLoad(Instantiate(_GetAndyPrefab(), result.Anchor.transform));
+                DontDestroyOnLoad(PhotonNetwork.Instantiate(_GetAndyPrefab().name, result.Anchor.transform.position, result.Anchor.transform.rotation));
                 EventManager.TriggerEvent("ANCHOR_PLACED");
                 GameObject.Find("XPAnchor").AddComponent<DontDestroyAR>();
                 UIController.ShowResolvingModeSuccess();
