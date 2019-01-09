@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 namespace hku.hydra.boxcity
 {
 
-    public class CatnipManager : MonoBehaviour
+    public class CatnipManager : MonoBehaviourPunCallbacks
     {
 
         public float secondsBetween;
@@ -70,7 +71,7 @@ namespace hku.hydra.boxcity
             //spawnPos = new Vector3(spawnPos.x, 0.01f, spawnPos.z);
             spawnPos = new Vector3(spawnPos.x, playingField.GetComponent<Transform>().position.y, spawnPos.z);
             Transform anchorParent = GameObject.Find("XPAnchor").transform;
-            Instantiate(catnipPrefab, spawnPos, this.transform.rotation).transform.SetParent(anchorParent);
+            PhotonNetwork.Instantiate(catnipPrefab.name, spawnPos, this.transform.rotation).transform.SetParent(anchorParent);
         }
     }
 }
