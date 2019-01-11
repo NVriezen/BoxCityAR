@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 114518220637574888}
   - component: {fileID: 114459149364374000}
   m_Layer: 0
-  m_Name: Cat
+  m_Name: CatP2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -864,7 +864,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: a28136a0a0a3f764aa227a95a23a71a2, type: 2}
+  - {fileID: 2100000, guid: 1dc9236f1267e5540b177e1a81b3fcb6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1175,9 +1175,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0, g: 0.98154783, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Color: {r: 0.7411765, g: 0.2784314, b: 1, a: 1}
+  m_Intensity: 2
+  m_Range: 0.05
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114510938708729036}
   viewIdField: 0
-  InstantiationId: 2
+  InstantiationId: 3
   isRuntimeInstantiated: 0
 --- !u!114 &114510938708729036
 MonoBehaviour:
@@ -1282,4 +1282,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666e297ded035644989dbb56c7cfe079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 1
+  playerNum: 2

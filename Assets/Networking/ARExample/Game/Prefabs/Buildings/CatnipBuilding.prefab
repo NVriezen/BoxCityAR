@@ -22,12 +22,12 @@ GameObject:
   - component: {fileID: 33440695327522102}
   - component: {fileID: 23987979634375364}
   - component: {fileID: 65594467115164244}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1102068983694606
 GameObject:
@@ -40,12 +40,12 @@ GameObject:
   - component: {fileID: 33469888757985828}
   - component: {fileID: 23261839528253902}
   - component: {fileID: 65204885823938410}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1112023665728950
 GameObject:
@@ -58,12 +58,12 @@ GameObject:
   - component: {fileID: 33526441324176308}
   - component: {fileID: 23833245083366858}
   - component: {fileID: 65853727011063664}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1214950967310774
 GameObject:
@@ -76,12 +76,12 @@ GameObject:
   - component: {fileID: 33595039657924754}
   - component: {fileID: 23621594183153738}
   - component: {fileID: 65296276947703672}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1227930530747452
 GameObject:
@@ -94,12 +94,12 @@ GameObject:
   - component: {fileID: 33466573649757058}
   - component: {fileID: 23589657218437382}
   - component: {fileID: 65377388170326526}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1232951290228756
 GameObject:
@@ -112,12 +112,12 @@ GameObject:
   - component: {fileID: 33069676378443796}
   - component: {fileID: 23035478871825452}
   - component: {fileID: 65372770665559630}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1268904190756172
 GameObject:
@@ -130,12 +130,12 @@ GameObject:
   - component: {fileID: 33521342538970376}
   - component: {fileID: 23455189962853970}
   - component: {fileID: 64562961541453652}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Licht (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1380866454274812
 GameObject:
@@ -148,12 +148,12 @@ GameObject:
   - component: {fileID: 33787068933672248}
   - component: {fileID: 23257009213114480}
   - component: {fileID: 65395588811241006}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1402203003321482
 GameObject:
@@ -166,12 +166,12 @@ GameObject:
   - component: {fileID: 33647489891917826}
   - component: {fileID: 23883348599126364}
   - component: {fileID: 65671641818960926}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1407170134252210
 GameObject:
@@ -184,12 +184,12 @@ GameObject:
   - component: {fileID: 33042735364101406}
   - component: {fileID: 23711651206799072}
   - component: {fileID: 65599444507158696}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1464147773673500
 GameObject:
@@ -202,12 +202,12 @@ GameObject:
   - component: {fileID: 33931449367602530}
   - component: {fileID: 23488214436760296}
   - component: {fileID: 65366112174601836}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1470922571026508
 GameObject:
@@ -220,12 +220,12 @@ GameObject:
   - component: {fileID: 33292313038113548}
   - component: {fileID: 23611857488752070}
   - component: {fileID: 65172401257520248}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1482081992409240
 GameObject:
@@ -235,12 +235,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4559828962111352}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CatnipBuilding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1486549268097808
 GameObject:
@@ -253,12 +253,12 @@ GameObject:
   - component: {fileID: 33532256170921740}
   - component: {fileID: 23508322301109788}
   - component: {fileID: 65317779600693640}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1492136007964594
 GameObject:
@@ -271,12 +271,12 @@ GameObject:
   - component: {fileID: 33306952678654632}
   - component: {fileID: 23024447478065734}
   - component: {fileID: 65951922029432406}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1499518322025804
 GameObject:
@@ -288,12 +288,12 @@ GameObject:
   - component: {fileID: 4573174397270616}
   - component: {fileID: 33559203369670610}
   - component: {fileID: 23237171348625500}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CatnipBuilding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1532195866157708
 GameObject:
@@ -306,12 +306,12 @@ GameObject:
   - component: {fileID: 33531222829754010}
   - component: {fileID: 23596187308000864}
   - component: {fileID: 65410337692975270}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1573387685475690
 GameObject:
@@ -324,12 +324,12 @@ GameObject:
   - component: {fileID: 33638191390939652}
   - component: {fileID: 23111061052205980}
   - component: {fileID: 65276582344060602}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1605290702137554
 GameObject:
@@ -342,12 +342,12 @@ GameObject:
   - component: {fileID: 33374646452162730}
   - component: {fileID: 23698682981559920}
   - component: {fileID: 65300283069939232}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1616624941575520
 GameObject:
@@ -360,12 +360,12 @@ GameObject:
   - component: {fileID: 33598138451174858}
   - component: {fileID: 23855416154725254}
   - component: {fileID: 65494160748624608}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1629874222391530
 GameObject:
@@ -378,12 +378,12 @@ GameObject:
   - component: {fileID: 33089737790873184}
   - component: {fileID: 23974762811332480}
   - component: {fileID: 65281866409977278}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1655574832549094
 GameObject:
@@ -396,12 +396,12 @@ GameObject:
   - component: {fileID: 33771071212926570}
   - component: {fileID: 23101971036195454}
   - component: {fileID: 65025232422037804}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1679648344105420
 GameObject:
@@ -414,12 +414,12 @@ GameObject:
   - component: {fileID: 33059207397962304}
   - component: {fileID: 23803822183976978}
   - component: {fileID: 64078881660501208}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Licht (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1685323090962484
 GameObject:
@@ -429,12 +429,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4977144038878902}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Licht Catnipbuilding Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1735031908333480
 GameObject:
@@ -447,12 +447,12 @@ GameObject:
   - component: {fileID: 33012705657302508}
   - component: {fileID: 23642297208125772}
   - component: {fileID: 65747179236463076}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1778578655752528
 GameObject:
@@ -465,12 +465,12 @@ GameObject:
   - component: {fileID: 33303585609954558}
   - component: {fileID: 23900209505498464}
   - component: {fileID: 65737848965686992}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1783636958164058
 GameObject:
@@ -483,12 +483,28 @@ GameObject:
   - component: {fileID: 33144938445130932}
   - component: {fileID: 23327853136108724}
   - component: {fileID: 65512648635580948}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1805356028858784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4557887006832850}
+  - component: {fileID: 65803839874528174}
+  m_Layer: 15
+  m_Name: Trigger
+  m_TagString: ScoreShop
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1807939447349774
 GameObject:
@@ -501,12 +517,12 @@ GameObject:
   - component: {fileID: 33524481536478058}
   - component: {fileID: 23421471916289674}
   - component: {fileID: 65024572653796332}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1821256245376030
 GameObject:
@@ -519,12 +535,12 @@ GameObject:
   - component: {fileID: 33784719341058966}
   - component: {fileID: 23007237357714954}
   - component: {fileID: 64927805390458226}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Licht (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1823162377979702
 GameObject:
@@ -537,12 +553,12 @@ GameObject:
   - component: {fileID: 33387305318599578}
   - component: {fileID: 23175103786736860}
   - component: {fileID: 65824763763792856}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1858708545378174
 GameObject:
@@ -555,12 +571,12 @@ GameObject:
   - component: {fileID: 33554927810643236}
   - component: {fileID: 23075240834546292}
   - component: {fileID: 65613251828409206}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1888318565441532
 GameObject:
@@ -573,12 +589,12 @@ GameObject:
   - component: {fileID: 33998706674205528}
   - component: {fileID: 23508053658021680}
   - component: {fileID: 65612474037973138}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1888999971134116
 GameObject:
@@ -591,12 +607,12 @@ GameObject:
   - component: {fileID: 33002658521491614}
   - component: {fileID: 23480869476948944}
   - component: {fileID: 65109531554677400}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1893205871829798
 GameObject:
@@ -609,12 +625,12 @@ GameObject:
   - component: {fileID: 33013067323348346}
   - component: {fileID: 23692259368347810}
   - component: {fileID: 64160350961176846}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Licht
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1905264684077554
 GameObject:
@@ -627,12 +643,12 @@ GameObject:
   - component: {fileID: 33209139901474234}
   - component: {fileID: 23884309029886308}
   - component: {fileID: 65392294151845800}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1944349404461002
 GameObject:
@@ -645,12 +661,12 @@ GameObject:
   - component: {fileID: 33672157355317842}
   - component: {fileID: 23618392571015334}
   - component: {fileID: 65235917799781950}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1944572130927758
 GameObject:
@@ -663,12 +679,12 @@ GameObject:
   - component: {fileID: 33479482296673240}
   - component: {fileID: 23275883247733690}
   - component: {fileID: 65635165890574408}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1981349702673736
 GameObject:
@@ -681,12 +697,12 @@ GameObject:
   - component: {fileID: 33590804778158112}
   - component: {fileID: 23851590245514842}
   - component: {fileID: 65107439160662684}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1993170528680566
 GameObject:
@@ -699,12 +715,12 @@ GameObject:
   - component: {fileID: 33267175328471392}
   - component: {fileID: 23445644656674196}
   - component: {fileID: 65150380671252212}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1997243163480030
 GameObject:
@@ -717,12 +733,12 @@ GameObject:
   - component: {fileID: 33344710337949030}
   - component: {fileID: 23808406360022092}
   - component: {fileID: 65880534412856876}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Bloem (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4006082960760954
 Transform:
@@ -919,6 +935,19 @@ Transform:
   m_Father: {fileID: 4977144038878902}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4557887006832850
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1805356028858784}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.577336, y: -0.1781249, z: -0.38421357}
+  m_LocalScale: {x: 10, y: 0.5, z: 10}
+  m_Children: []
+  m_Father: {fileID: 4559828962111352}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4559790661858676
 Transform:
   m_ObjectHideFlags: 1
@@ -938,12 +967,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1482081992409240}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.279627, y: 9.807881e-16, z: -44.17077}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4573174397270616}
   - {fileID: 4977144038878902}
+  - {fileID: 4557887006832850}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3283,6 +3313,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65803839874528174
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1805356028858784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 50, z: 3}
+  m_Center: {x: 0, y: 20, z: 0}
 --- !u!65 &65824763763792856
 BoxCollider:
   m_ObjectHideFlags: 1

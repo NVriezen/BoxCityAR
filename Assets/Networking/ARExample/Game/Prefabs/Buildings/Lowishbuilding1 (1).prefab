@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33749460506013264}
   - component: {fileID: 23532246314842840}
   - component: {fileID: 64464293688751062}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33628125562465104}
   - component: {fileID: 23063636590779280}
   - component: {fileID: 64183640612691956}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 33291854781279844}
   - component: {fileID: 23280213265715540}
   - component: {fileID: 64786569463075132}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 33407891826724616}
   - component: {fileID: 23818003945483266}
   - component: {fileID: 64950445008355114}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,12 +91,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4361164846153622}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Liggies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1393459918840780
 GameObject:
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 33235773606600714}
   - component: {fileID: 23135474407998092}
   - component: {fileID: 64004603851987200}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 33170391304210216}
   - component: {fileID: 23032893905408408}
   - component: {fileID: 64694651000769410}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 33705820834532130}
   - component: {fileID: 23633501585452128}
   - component: {fileID: 64963794855660930}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 33604242663336636}
   - component: {fileID: 23471239813227536}
   - component: {fileID: 64302569645408638}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,12 +180,12 @@ GameObject:
   - component: {fileID: 4518187826916296}
   - component: {fileID: 33836813007530802}
   - component: {fileID: 23936291122900218}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Lowishbuilding1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1695838922124746
 GameObject:
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 33535140512691192}
   - component: {fileID: 23762588689581266}
   - component: {fileID: 64729925972190786}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 33840583933796946}
   - component: {fileID: 23781525832518792}
   - component: {fileID: 64245961904643732}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Light (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,12 +231,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4815100466220716}
-  m_Layer: 0
+  - component: {fileID: 65565810727497904}
+  m_Layer: 15
   m_Name: Lowishbuilding1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4069174426841252
 Transform:
@@ -385,7 +386,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1876392058290364}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 60.4, y: 9.611927e-16, z: -32.9}
+  m_LocalPosition: {x: 10, y: 0, z: -75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4518187826916296}
@@ -1021,3 +1022,15 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65565810727497904
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1876392058290364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 24, y: 30, z: 24}
+  m_Center: {x: 1.5, y: 15, z: -1.5}
