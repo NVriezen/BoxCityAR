@@ -235,6 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4559828962111352}
+  - component: {fileID: 65545751838921392}
   m_Layer: 15
   m_Name: CatnipBuilding
   m_TagString: Untagged
@@ -3217,6 +3218,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65545751838921392
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1482081992409240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 19, y: 19, z: 19}
+  m_Center: {x: 2.6, y: 9.5, z: 0}
 --- !u!65 &65594467115164244
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -3323,8 +3336,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 50, z: 3}
-  m_Center: {x: 0, y: 20, z: 0}
+  m_Size: {x: 2, y: 50, z: 2.05}
+  m_Center: {x: 0, y: 20, z: 0.03}
 --- !u!65 &65824763763792856
 BoxCollider:
   m_ObjectHideFlags: 1

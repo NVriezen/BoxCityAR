@@ -66,7 +66,7 @@ namespace hku.hydra.boxcity
             do
             {
                 spawnPos = playingField.GetComponent<Transform>().position + new Vector3(Random.Range(-fieldSize, fieldSize), 0f, Random.Range(-fieldSize, fieldSize));
-                walkable = !Physics.CheckSphere(spawnPos, catRadius - 0.1f, unwalkableMask);
+                walkable = !Physics.CheckSphere(spawnPos, catRadius, unwalkableMask);
                 //GameObject ball = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 //ball.transform.position = spawnPos;
                 //ball.transform.localScale = new Vector3(catRadius - 0.1f, catRadius - 0.1f, catRadius - 0.1f);

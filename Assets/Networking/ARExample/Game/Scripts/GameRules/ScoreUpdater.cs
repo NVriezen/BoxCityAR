@@ -42,7 +42,7 @@ public class ScoreUpdater : MonoBehaviour
         PhotonNetwork.CurrentRoom.Players.TryGetValue(playerNum, out player);
         //scores[playerNum] += 1;
         player.AddScore(1);
-        scoreText.text = "P" + playerNum + ": " + player.GetScore().ToString("000");
+        scoreText.text = "P " + playerNum + " : " + player.GetScore().ToString("000");
         //playerScores [ playerNum ].text = "Score: " + scores [ playerNum ].ToString("000");;
     }
 }

@@ -67,9 +67,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4291590491812204}
+  - component: {fileID: 135950936653115570}
   - component: {fileID: 114827550831058694}
   - component: {fileID: 114073334098493202}
-  - component: {fileID: 135950936653115570}
   m_Layer: 0
   m_Name: Catnip
   m_TagString: Catnip
