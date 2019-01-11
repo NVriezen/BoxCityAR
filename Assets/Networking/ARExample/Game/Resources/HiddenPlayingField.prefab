@@ -656,6 +656,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4523900974596142}
+  - component: {fileID: 114758297833845756}
+  - component: {fileID: 114791305779882912}
   m_Layer: 0
   m_Name: HiddenPlayingField
   m_TagString: Untagged
@@ -17004,6 +17006,41 @@ MonoBehaviour:
     m_Bits: 32768
   gridWorldSize: {x: 1, y: 1}
   nodeRadius: 0.06
+--- !u!114 &114758297833845756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157126732865394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 114791305779882912}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &114791305779882912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157126732865394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
 --- !u!135 &135737028619483416
 SphereCollider:
   m_ObjectHideFlags: 1

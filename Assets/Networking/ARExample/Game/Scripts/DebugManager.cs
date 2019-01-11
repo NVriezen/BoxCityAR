@@ -178,7 +178,7 @@ namespace hku.hydra.boxcity
                     GameObject tempPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPos, Quaternion.identity, 0);
                     //GameObject tempPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
                     tempPlayer.GetComponent<EventSender>().playerNum = PhotonNetwork.LocalPlayer.ActorNumber;
-                    tempPlayer.transform.SetParent(GameObject.Find("XPAnchor").transform);
+                    tempPlayer.transform.SetParent(GameObject.FindObjectOfType<GoogleARCore.CrossPlatform.XPAnchor>().transform);
                     text.text = "carrr";
                 }
 				else

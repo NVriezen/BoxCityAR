@@ -70,8 +70,8 @@ namespace hku.hydra.boxcity
             Debug.Log("Walkable Field Found!");
             //spawnPos = new Vector3(spawnPos.x, 0.01f, spawnPos.z);
             spawnPos = new Vector3(spawnPos.x, playingField.GetComponent<Transform>().position.y, spawnPos.z);
-            Transform anchorParent = GameObject.Find("XPAnchor").transform;
-            PhotonNetwork.Instantiate(catnipPrefab.name, spawnPos, this.transform.rotation).transform.SetParent(anchorParent);
+            Transform anchorParent = GameObject.FindObjectOfType<GoogleARCore.CrossPlatform.XPAnchor>().transform;
+            PhotonNetwork.Instantiate("Catnip", spawnPos, this.transform.rotation).transform.SetParent(anchorParent);
         }
     }
 }
