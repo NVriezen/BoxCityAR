@@ -19,6 +19,8 @@ namespace hku.hydra.boxcity
         //public Grid2D grid;
         public float fieldSize;
 
+        private GameObject catnipActiveObject;
+
         private void Start()
         {
             //grid = GameObject.Find("A*").GetComponent<Grid2D>();
@@ -29,8 +31,11 @@ namespace hku.hydra.boxcity
             //StartCoroutine(SpawnCatnip()); //Only for debugging
         }
 
-        private void OnDisable()
+        private new void OnDisable()
         {
+            if (PhotonNetwork.IsMasterClient) {
+                PhotonNetwork.Destroy(catnipActiveObject);
+            }
             EventManager.StopListening("SPAWN_CATNIP", Spawner);
         }
 
@@ -69,9 +74,10 @@ namespace hku.hydra.boxcity
             } while (walkable == false);
             Debug.Log("Walkable Field Found!");
             //spawnPos = new Vector3(spawnPos.x, 0.01f, spawnPos.z);
-            spawnPos = new Vector3(spawnPos.x, playingField.GetComponent<Transform>().position.y, spawnPos.z);
+            spawnPos = new Vector3(spawnPos.x, playingField.GetComponent<Transform>().position.y + 0.01f, spawnPos.z);
             Transform anchorParent = GameObject.FindObjectOfType<GoogleARCore.CrossPlatform.XPAnchor>().transform;
-            PhotonNetwork.Instantiate("Catnip", spawnPos, this.transform.rotation).transform.SetParent(anchorParent);
+            catnipActiveObject = PhotonNetwork.Instantiate("Catnip", spawnPos, this.transform.rotation);
+            catnipActiveObject.transform.SetParent(anchorParent);
         }
     }
 }

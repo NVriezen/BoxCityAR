@@ -564,7 +564,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 999'
+  m_Text: 'P1: 000'
 --- !u!222 &91370722
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6688,7 +6688,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 999'
+  m_Text: 'P2: 000'
 --- !u!222 &839674939
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10177,7 +10177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 999'
+  m_Text: 'P4: 000'
 --- !u!222 &1212755485
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11012,7 +11012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1299854173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11415,7 +11415,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 999'
+  m_Text: 'P3: 000'
 --- !u!222 &1367183679
 CanvasRenderer:
   m_ObjectHideFlags: 0
