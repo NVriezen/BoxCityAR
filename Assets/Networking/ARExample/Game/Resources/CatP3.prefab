@@ -243,7 +243,6 @@ GameObject:
   - component: {fileID: 114510938708729036}
   - component: {fileID: 114403718770290828}
   - component: {fileID: 114518220637574888}
-  - component: {fileID: 114459149364374000}
   m_Layer: 0
   m_Name: CatP3
   m_TagString: Player
@@ -1176,7 +1175,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 0.16862746, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 0.05
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1220,22 +1219,6 @@ MonoBehaviour:
   rayMask:
     serializedVersion: 2
     m_Bits: 131072
---- !u!114 &114459149364374000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1923064099475190}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a0e86d2306d4cb45bead68386f74038, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScores:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &114467770705297814
 MonoBehaviour:
   m_ObjectHideFlags: 1

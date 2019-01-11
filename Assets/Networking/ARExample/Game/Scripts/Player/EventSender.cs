@@ -22,14 +22,14 @@ public class EventSender : MonoBehaviourPunCallbacks {
         {
             //if () //check if doing a dash
             {
-                //set int that they collided once with a certain player on both players
-                if (collider.gameObject.GetComponent<EventSender>().holdingCatnip)
+                //Only if not holding catnip change something on this player and collided player
+                if (!holdingCatnip)
                 {
-                    //collider.gameObject.GetComponent<EventSender>().holdingCatnip = false;
-                    holdingCatnip = true;
-                } else
-                {
-                    holdingCatnip = false;
+                    if (collider.gameObject.GetComponent<EventSender>().holdingCatnip)
+                    {
+                        collider.gameObject.GetComponent<EventSender>().holdingCatnip = false;
+                        holdingCatnip = true;
+                    }
                 }
             }
         }

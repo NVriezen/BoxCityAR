@@ -243,8 +243,9 @@ GameObject:
   - component: {fileID: 114510938708729036}
   - component: {fileID: 114403718770290828}
   - component: {fileID: 114518220637574888}
+  - component: {fileID: 114459149364374000}
   m_Layer: 0
-  m_Name: CatP2
+  m_Name: Cat
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -427,7 +428,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1923064099475190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.0191, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4567081649720428}
@@ -863,7 +864,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 1dc9236f1267e5540b177e1a81b3fcb6, type: 2}
+  - {fileID: 2100000, guid: 80826ed7ade4aa14a9f6e95c809f73f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1174,8 +1175,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.7411765, g: 0.2784314, b: 1, a: 1}
-  m_Intensity: 3
+  m_Color: {r: 0, g: 0.98154783, b: 1, a: 1}
+  m_Intensity: 2
   m_Range: 0.05
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1219,6 +1220,22 @@ MonoBehaviour:
   rayMask:
     serializedVersion: 2
     m_Bits: 131072
+--- !u!114 &114459149364374000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1923064099475190}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0e86d2306d4cb45bead68386f74038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScores:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114467770705297814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1238,7 +1255,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114510938708729036}
   viewIdField: 0
-  InstantiationId: 3
+  InstantiationId: 4
   isRuntimeInstantiated: 0
 --- !u!114 &114510938708729036
 MonoBehaviour:
@@ -1265,4 +1282,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666e297ded035644989dbb56c7cfe079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 2
+  playerNum: 1
