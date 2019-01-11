@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class EventSender : MonoBehaviour {
+public class EventSender : MonoBehaviourPunCallbacks {
 
 	public int playerNum = 1;
     private bool holdingCatnip;
@@ -10,7 +11,7 @@ public class EventSender : MonoBehaviour {
     void OnTriggerEnter(Collider collider){
         if (collider.tag == "Catnip" && !holdingCatnip) {
             holdingCatnip = true;
-            Destroy(collider.gameObject);
+            PhotonNetwork.Destroy(collider.gameObject);
         } else if (collider.tag == "ScoreShop" && holdingCatnip)
         {
             holdingCatnip = false;

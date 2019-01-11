@@ -51,6 +51,8 @@ namespace hku.hydra.boxcity
         [Tooltip("Game Over Canvas")]
         public GameObject gameOverCanvas;
 
+        private GameObject playerActiveObject;
+
         #endregion
 
 
@@ -136,6 +138,7 @@ namespace hku.hydra.boxcity
 
         public void RestartGame()
         {
+            PhotonNetwork.Destroy(playerActiveObject);
             PhotonNetwork.LoadLevel("RoomFor2");
         }
 
@@ -168,23 +171,23 @@ namespace hku.hydra.boxcity
 			}
 			else
 			{
-				if (UnityStandardAssets.Vehicles.Car.CarUserControl.LocalPlayerInstance == null)
-				{
+				//if (playerActiveObject == null)
+				//{
 					Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
                     // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
  
                     Vector3 spawnPos = GameObject.Find("SpawnPointP" + PhotonNetwork.LocalPlayer.ActorNumber).transform.position;
 
-                    GameObject tempPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPos, Quaternion.identity, 0);
+                    playerActiveObject = PhotonNetwork.Instantiate("CatP" + PhotonNetwork.LocalPlayer.ActorNumber, spawnPos, Quaternion.identity, 0);
                     //GameObject tempPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
-                    tempPlayer.GetComponent<EventSender>().playerNum = PhotonNetwork.LocalPlayer.ActorNumber;
-                    tempPlayer.transform.SetParent(GameObject.FindObjectOfType<GoogleARCore.CrossPlatform.XPAnchor>().transform);
-                    text.text = "carrr";
-                }
-				else
-				{
-					Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
-				}
+                    playerActiveObject.GetComponent<EventSender>().playerNum = PhotonNetwork.LocalPlayer.ActorNumber;
+                    playerActiveObject.transform.SetParent(GameObject.FindObjectOfType<GoogleARCore.CrossPlatform.XPAnchor>().transform);
+                    //text.text = "carrr";
+                //}
+				//else
+				//{
+				//	Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
+				//}
 			}
             Debug.Log("out coroutine");
         }
