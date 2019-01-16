@@ -98,7 +98,7 @@ namespace hku.hydra.boxcity
             {
                 yield return null;
             }
-            Debug.Log("start Spawning");
+            //Debug.Log("start Spawning");
             text.text = "spawning";
             if (playerPrefab == null)
 			{
@@ -108,7 +108,7 @@ namespace hku.hydra.boxcity
 			{
 				//if (playerActiveObject == null)
 				//{
-					Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
+					//Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
                     // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
  
                     Vector3 spawnPos = GameObject.Find("SpawnPointP" + PhotonNetwork.LocalPlayer.ActorNumber).transform.position;
@@ -117,7 +117,7 @@ namespace hku.hydra.boxcity
                     playerActiveObject = PhotonNetwork.Instantiate("CatP" + PhotonNetwork.LocalPlayer.ActorNumber, spawnPos, Quaternion.identity, 0);
                     //GameObject tempPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
                     playerActiveObject.GetComponent<EventSender>().playerNum = PhotonNetwork.LocalPlayer.ActorNumber;
-                    playerActiveObject.transform.SetParent(GameObject.FindObjectOfType<GoogleARCore.CrossPlatform.XPAnchor>().transform);
+                    playerActiveObject.transform.SetParent(GameObject.FindWithTag("Finish").transform);//GameObject.FindObjectOfType<GoogleARCore.CrossPlatform.XPAnchor>().transform);
                     //text.text = "carrr";
                 //}
 				//else
@@ -137,7 +137,7 @@ namespace hku.hydra.boxcity
 			{
 				Debug.LogError("PhotonNetwork : Trying to Load a level but we are not the master Client");
 			}
-			Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
+			//Debug.LogFormat("PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount);
 			PhotonNetwork.LoadLevel("Roomfor" + PhotonNetwork.CurrentRoom.PlayerCount);
 		}
 

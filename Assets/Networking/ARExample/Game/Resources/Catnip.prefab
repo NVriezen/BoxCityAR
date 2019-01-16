@@ -184,7 +184,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0, g: 1, b: 0.7019608, a: 1}
-  m_Intensity: 2
+  m_Intensity: 10
   m_Range: 0.1
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -244,7 +244,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114073334098493202}
   viewIdField: 0
-  InstantiationId: 1
+  InstantiationId: 2
   isRuntimeInstantiated: 0
 --- !u!135 &135950936653115570
 SphereCollider:

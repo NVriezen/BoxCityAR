@@ -8,6 +8,7 @@ TagManager:
   - ScoreShop
   - Catnip
   - EazyARDetectedPlane
+  - Powerup
   layers:
   - Default
   - TransparentFX

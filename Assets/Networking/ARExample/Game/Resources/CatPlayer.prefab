@@ -1260,6 +1260,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   force: 20000
   turnSpeed: 10
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  deltaMove: 0
 --- !u!114 &114735826618302064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1293,3 +1297,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
+  multiplier: 0
+  time: 0

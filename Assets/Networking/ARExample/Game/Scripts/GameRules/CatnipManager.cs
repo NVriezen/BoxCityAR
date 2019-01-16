@@ -16,7 +16,6 @@ namespace hku.hydra.boxcity
         [Tooltip("The radius in which the next catnip may not spawn in relation to the previous spawned catnip")]
         public float catRadius;
         public GameObject playingField;
-        //public Grid2D grid;
         public float fieldSize;
 
         private GameObject catnipActiveObject;
@@ -26,7 +25,7 @@ namespace hku.hydra.boxcity
             //grid = GameObject.Find("A*").GetComponent<Grid2D>();
             playingField = GameObject.FindWithTag("Finish");
             EventManager.StartListening("SPAWN_CATNIP", Spawner);
-            Debug.Log("Starting Field Check");
+            //Debug.Log("Starting Field Check");
             EventManager.TriggerEvent("SPAWN_CATNIP");
             //StartCoroutine(SpawnCatnip()); //Only for debugging
         }
@@ -46,7 +45,7 @@ namespace hku.hydra.boxcity
                 //wait for seconds
                 yield return new WaitForSeconds(secondsBetween);
                 //spawn
-                Debug.Log("Starting Field Check");
+                //Debug.Log("Starting Field Check");
                 Spawner();
                 //iets wat het sneller maakt?
             }
@@ -70,14 +69,15 @@ namespace hku.hydra.boxcity
                 //GameObject ball = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 //ball.transform.position = spawnPos;
                 //ball.transform.localScale = new Vector3(catRadius - 0.1f, catRadius - 0.1f, catRadius - 0.1f);
-                Debug.Log("checking walkable field");
+                //Debug.Log("checking walkable field");
             } while (walkable == false);
-            Debug.Log("Walkable Field Found!");
+            //Debug.Log("Walkable Field Found!");
             //spawnPos = new Vector3(spawnPos.x, 0.01f, spawnPos.z);
             spawnPos = new Vector3(spawnPos.x, playingField.GetComponent<Transform>().position.y + 0.01f, spawnPos.z);
-            Transform anchorParent = GameObject.FindObjectOfType<GoogleARCore.CrossPlatform.XPAnchor>().transform;
+            //Transform anchorParent = GameObject.FindObjectOfType<GoogleARCore.CrossPlatform.XPAnchor>().transform;
             catnipActiveObject = PhotonNetwork.Instantiate("Catnip", spawnPos, this.transform.rotation);
-            catnipActiveObject.transform.SetParent(anchorParent);
+            //catnipActiveObject.transform.SetParent(anchorParent);
+            catnipActiveObject.transform.SetParent(playingField.transform);
         }
     }
 }

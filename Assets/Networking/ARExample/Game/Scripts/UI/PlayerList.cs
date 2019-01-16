@@ -23,7 +23,8 @@ public class PlayerList : MonoBehaviour {
                     newLabel.GetComponentInChildren<UnityEngine.UI.Text>().text = PhotonNetwork.PlayerList[PhotonNetwork.CurrentRoom.Players.Count-1].NickName;
                 //} else
                 //{
-                 //   Debug.LogError("No such player in current room");
+                //   
+                //Debug.LogError("No such player in current room");
                 //}
             }
         }

@@ -38,6 +38,7 @@ public class EventSender : MonoBehaviourPunCallbacks {
                     {
                         collider.gameObject.GetComponent<EventSender>().holdingCatnip = false;
                         holdingCatnip = true;
+                        EventManager.TriggerEvent("CATNIP_STOLEN");
                     }
                 }
             }
@@ -47,8 +48,6 @@ public class EventSender : MonoBehaviourPunCallbacks {
             player.force = player.force * multiplier;
             StartCoroutine(WaitForSeconds());
         }
-
-        
 	}
 
     IEnumerator WaitForSeconds()

@@ -236,7 +236,7 @@ namespace hku.hydra.boxcity
             {
                 yield return null;
             }
-            Debug.Log("We load the 'Roomfor[maxPlayers]' ");
+            //Debug.Log("We load the 'Roomfor[maxPlayers]' ");
 
             // #Critical
             // Load the Room Level.

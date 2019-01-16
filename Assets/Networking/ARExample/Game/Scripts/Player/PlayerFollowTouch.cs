@@ -12,6 +12,7 @@ public class PlayerFollowTouch : MonoBehaviourPunCallbacks
 	private Rigidbody rigid;
     private bool inputActive = true;
     public LayerMask rayMask;
+    public float deltaMove;
 
     private void Awake()
     {
@@ -82,6 +83,7 @@ public class PlayerFollowTouch : MonoBehaviourPunCallbacks
                 //rigid.AddForce(this.transform.position + (direction * force));
                 //transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(transform.forward, direction, turnSpeed * Time.deltaTime, 0.0f));
 
+                //transform.position = Vector3.MoveTowards(transform.position, transform.position + distance, deltaMove);
                 rigid.AddForce(this.transform.position + (distance * force));
                 transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(transform.forward, distance, turnSpeed * Time.deltaTime, 0.0f));
             }

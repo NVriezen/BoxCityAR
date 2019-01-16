@@ -204,20 +204,20 @@ namespace hku.hydra.boxcity
         public override void OnJoinedLobby()
         {
             base.OnJoinedLobby();
-            Debug.Log("Joined a lobby, yeahh" + PhotonNetwork.CurrentLobby.Name);
+            //Debug.Log("Joined a lobby, yeahh" + PhotonNetwork.CurrentLobby.Name);
         }
 
         public override void OnCreatedRoom()
         {
             base.OnCreatedRoom();
-            Debug.Log("Created our own room");
+            //Debug.Log("Created our own room");
         }
 
 
         public override void OnJoinedRoom(){
             // #Critical: We only load if we are the first player, else we rely on `PhotonNetwork.AutomaticallySyncScene` to sync our instance scene.
             progressLabel.SetActive(false);
-            Debug.Log("Joined a Room");
+            //Debug.Log("Joined a Room");
             if (/*PhotonNetwork.CurrentRoom.PlayerCount == maxPlayersPerRoom && */PhotonNetwork.IsMasterClient)
 			{
                 PhotonNetwork.CurrentRoom.IsVisible = true;
@@ -244,7 +244,7 @@ namespace hku.hydra.boxcity
             {
                 yield return null;
             }
-            Debug.Log("We load the 'Roomfor[maxPlayers]' ");
+            //Debug.Log("We load the 'Roomfor[maxPlayers]' ");
 
             // #Critical
             // Load the Room Level.
