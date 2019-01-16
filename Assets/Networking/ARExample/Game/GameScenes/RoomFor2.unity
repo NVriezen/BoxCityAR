@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112002032, guid: 340e4696cf57b4e4892a561211d496ab,
+  m_LightingDataAsset: {fileID: 112002656, guid: 340e4696cf57b4e4892a561211d496ab,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -681,6 +681,7 @@ GameObject:
   - component: {fileID: 489206835}
   - component: {fileID: 489206837}
   - component: {fileID: 489206838}
+  - component: {fileID: 489206839}
   m_Layer: 0
   m_Name: DebugManager
   m_TagString: Untagged
@@ -752,6 +753,28 @@ MonoBehaviour:
   catRadius: 0.015
   playingField: {fileID: 0}
   fieldSize: 0.5
+--- !u!114 &489206839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489206834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a14fe50e835c5428e0a1802942020b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsBetween: 8
+  pickupPrefab: {fileID: 1774024000566164, guid: 1c5c88b49d59b7e4099f0c7dfc166dae,
+    type: 2}
+  unwalkableMask:
+    serializedVersion: 2
+    m_Bits: 32768
+  catRadius: 0.015
+  playingField: {fileID: 0}
+  fieldSize: 0.5
+  currentPickups: 0
+  maxPickups: 8
 --- !u!1 &707182799
 GameObject:
   m_ObjectHideFlags: 0
