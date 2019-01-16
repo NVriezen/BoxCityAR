@@ -6,16 +6,25 @@ using Photon.Pun;
 public class EventSender : MonoBehaviourPunCallbacks {
 
 	public int playerNum = 1;
+    public float multiplier;
+    public float time;
     private bool holdingCatnip;
+    private PlayerFollowTouch player;
+
+    public override void OnEnable()
+    {
+        player = GetComponent<PlayerFollowTouch>();
+    }
 
     void OnTriggerEnter(Collider collider){
         if (collider.tag == "Catnip" && !holdingCatnip) {
             holdingCatnip = true;
+            EventManager.TriggerEvent("CATNIP_GOT");
             PhotonNetwork.Destroy(collider.gameObject);
         } else if (collider.tag == "ScoreShop" && holdingCatnip)
         {
             holdingCatnip = false;
-            Debug.Log("Score +1");
+            //Debug.Log("Score +1");
             EventManager.TriggerEvent("SCORE_PLAYER_" + playerNum);
             EventManager.TriggerEvent("SPAWN_CATNIP");
         } else if (collider.tag == "Player")
@@ -32,6 +41,19 @@ public class EventSender : MonoBehaviourPunCallbacks {
                     }
                 }
             }
+        } else if (collider.tag == "Powerup")
+        {
+            Destroy(collider.gameObject);
+            player.force = player.force * multiplier;
+            StartCoroutine(WaitForSeconds());
         }
+
+        
 	}
+
+    IEnumerator WaitForSeconds()
+    {
+        yield return new WaitForSeconds(time);
+        player.force = player.force / multiplier;
+    }
 }
